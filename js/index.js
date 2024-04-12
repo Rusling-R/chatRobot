@@ -38,7 +38,6 @@ function addUserMsg(content, time) {
     $('#nickname').innerText = userInfo.nickname;
     $('#loginId').innerText = userInfo.loginId;
     const history = (await getHistory()).data;
-    console.log(history);
     history.forEach((i) => {
       const time = formatDate(new Date(+i.createdAt), FORMAT_TIME);
       if (i.from === userInfo.loginId) {
