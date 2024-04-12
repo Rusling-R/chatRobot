@@ -31,5 +31,7 @@ userForm.addEventListener('submit', async (e) => {
   if (res2.code === 0) {
     alert('注册成功');
     window.location.href = './login.html';
+  } else {
+    txtLoginPwdConfirm.errorP.innerText = res2.msg;
   }
 });

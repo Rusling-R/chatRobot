@@ -2,11 +2,9 @@ function formatDate(date, format) {
   const year = date.getFullYear().toString().padStart(4, '0');
   const month = (date.getMonth() + 1).toString().padStart(2, '0');
   const day = date.getDate().toString().padStart(2, '0');
-
   const hour = date.getHours().toString().padStart(2, '0');
   const minute = date.getMinutes().toString().padStart(2, '0');
   const second = date.getSeconds().toString().padStart(2, '0');
-
   return format
     .replace('yyyy', year)
     .replace('MM', month)
@@ -51,7 +49,6 @@ function addUserMsg(content, time) {
     });
     chatContainer.scrollTop = chatContainer.scrollHeight;
   } else {
-    alert('未登录或已过期，请重新登录');
     window.location.href = './login.html';
   }
 
