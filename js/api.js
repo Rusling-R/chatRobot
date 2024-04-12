@@ -1,6 +1,14 @@
 const HOST_URL = 'https://study.duyiedu.com/api';
 const TOKEN_NAME = 'tokenValue';
 
+function $(selector) {
+  return document.querySelector(selector);
+}
+
+function $$(selector) {
+  return Array.from(document.querySelectorAll(selector));
+}
+
 function GET(path) {
   const method = 'GET';
   const headers = {
